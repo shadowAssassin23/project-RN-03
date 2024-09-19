@@ -19,12 +19,15 @@ export default function App() {
   const [numbers, setNumbers] = useState(false);
   const [symbols, setSymbols] = useState(false);
 
-  const generatePasswordString = () => {
+  const generatePasswordString = (passwordLength: number) => {
     // todo
   };
 
-  const createPassword = () => {
-    // todo
+  const createPassword = (characters: string, passwordLength: number) => {
+    let result = '';
+    let characterIndex = Math.round(Math.random() * characters.length);
+    result += characters.charAt(characterIndex);
+    return result;
   };
 
   const resetPassword = () => {
